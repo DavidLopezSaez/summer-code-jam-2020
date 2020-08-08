@@ -1,0 +1,31 @@
+* {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.crd-title {
+  font-size: 18px;
+  color: rgb(0, 67, 190);
+  text-decoration: underline solid rgb(0, 32, 177);
+}
+
+.crd-title:hover {
+  color: rgb(1, 35, 129);
+}
+
+.crd-text {
+  font-size: 15px;
+  line-height: 1em;
+  margin-bottom: -3px;
+}
+
+.crd-link {
+  font-size: 15px;
+  line-height: 1em;
+  color: rgb(2, 129, 40);
+  text-decoration: none;
+}
+
+.crd-link:hover {
+  color: rgb(1, 97, 30);
+  text-decoration: none;
+}
