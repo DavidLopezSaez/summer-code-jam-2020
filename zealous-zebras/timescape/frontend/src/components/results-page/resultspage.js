@@ -3,17 +3,29 @@ import Card from "./card";
 import Navigation from "./nav";
 import axios from "axios";
 
-let current_year = "1998";
-
-// Imports the correct style sheet.
-(async () => {
-  await import(`./styling/${current_year}.css`);
-})();
-
 class ResultsPage extends Component {
   constructor(props) {
     super(props);
     this.state = { response: [] };
+
+    const current_year = this.props.year;
+    var displayed_css = "2015-2020"
+
+    if (current_year < 2004) {
+      displayed_css = "1998-2004";
+    } else if (current_year < 2011) {
+      displayed_css = "2004-2011";
+    } else if (current_year < 2015) {
+      displayed_css = "2011-2015";
+    } else {
+      displayed_css = "2015-2020";
+    }
+
+    // Imports the correct style sheet.
+    (async () => {
+      console.log(displayed_css)
+      await import(`./styling/${displayed_css}.css`);
+    })();
   }
 
   componentDidMount() {
